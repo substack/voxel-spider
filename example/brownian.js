@@ -30,7 +30,7 @@ setTimeout(function f () {
 }, 2000 * Math.random());
 
 setTimeout(function f () {
-    spider.turn(Math.PI * (Math.random() - 0.5));
+    spider.rotation.y += Math.PI * (Math.random() - 0.5);
     setTimeout(f, 2000 * Math.random());
 }, 2000 * Math.random());
 

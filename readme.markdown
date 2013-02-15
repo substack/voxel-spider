@@ -59,13 +59,20 @@ Return a function `createSpider` from the
 
 Create a `spider`.
 
-## spider.turn(angle)
-
-Turn `angle` in radians around the y-axis.
-
 ## spider.move(x, y, z)
 
 Move a relative amount by modifying the velocity.
+
+# attributes
+
+## spider.rotation
+
+Control the rotation about the `x`, `y`, and `z` axis by updating
+`spider.rotation.x`, `spider.rotation.y`, and `spider.rotation.z` in radians.
+
+## spider.position
+
+Update the spider position by setting `x`, `y`, and `z` attributes.
 
 # install
 
