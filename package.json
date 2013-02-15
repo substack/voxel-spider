@@ -1,0 +1,31 @@
+{
+    "name": "voxel-spider",
+    "version": "0.0.0",
+    "description": "blocky spider creatures for your voxel.js game",
+    "main": "index.js",
+    "dependencies": {
+        "voxel-texture": "~0.3.1",
+        "voxel-physical": "~0.0.2"
+    },
+    "devDependencies": {
+        "voxel-player": "~0.0.0",
+        "voxel-engine": "~0.0.0",
+        "painterly-textures": "~0.0.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/substack/voxel-spider.git"
+    },
+    "homepage": "https://github.com/substack/voxel-spider",
+    "keywords": [
+        "voxel",
+        "spider",
+        "creature"
+    ],
+    "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+    },
+    "license": "MIT"
+}
