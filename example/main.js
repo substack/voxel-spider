@@ -24,11 +24,8 @@ window.addEventListener('keydown', function (ev) {
 });
 
 var createSpider = require('../')(game);
-var s0 = createSpider();
-
-setInterval(function () {
-    s0.turn(360 / 8);
-}, 250);
+var spider = createSpider();
+window.spider = spider;
 
 game.on('fire', function (target, state) {
     var vec = game.cameraVector();
