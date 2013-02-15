@@ -90,8 +90,6 @@ function Spider (game) {
     
     var dims = new T.Vector3(10, 10, 10);
     var item = this.item = game.makePhysical(body, dims);
-    
-    item.yaw.position.y = 200;
     item.subjectTo(new T.Vector3(0, -0.00009, 0));
     
     this.position = item.yaw.position;

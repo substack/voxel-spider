@@ -19,6 +19,7 @@ window.addEventListener('keydown', function (ev) {
 
 var createSpider = require('../')(game);
 var spider = createSpider();
+spider.position.y = 200;
 
 setInterval(function () {
     spider.position.y += 1;
