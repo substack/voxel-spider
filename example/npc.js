@@ -5,37 +5,23 @@ var game = createGame({
     generate: voxel.generator['Valley'],
     texturePath: '/textures/'
 });
-window.game = game;
 game.appendTo('#container');
-
-var debris = require('voxel-debris');
-var explode = debris(game, { power: 1.5, yield: 0 });
 
 var createPlayer = require('voxel-player')(game);
 var substack = createPlayer('substack.png');
 substack.possess();
 
-var ctrl = false;
 window.addEventListener('keydown', function (ev) {
     if (ev.keyCode === 'R'.charCodeAt(0)) {
         substack.toggle();
     }
-    ctrl = ev.ctrlKey;
 });
 
 var createSpider = require('../')(game);
 var spider = createSpider();
-window.spider = spider;
 
-game.on('fire', function (target, state) {
-    var vec = game.cameraVector();
-    var pos = game.cameraPosition();
-    var point = game.raycast(pos, vec, 100);
-    if (!point) return;
-    
-    if (ctrl) {
-        var pt = point.addSelf(vec.multiplyScalar(-game.cubeSize / 2));
-        game.createBlock(pt, 1);
-    }
-    else explode(point);
-});
+setInterval(function () {
+    spider.position.y += 1;
+}, 250);
+
+window.spider = spider;

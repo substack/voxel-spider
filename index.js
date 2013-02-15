@@ -94,6 +94,8 @@ function Spider (game) {
     item.yaw.position.y = 200;
     item.subjectTo(new T.Vector3(0, -0.00009, 0));
     
+    this.position = item.yaw.position;
+    
     game.scene.add(body);
     game.addItem(item);
 }
