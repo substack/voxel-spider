@@ -93,14 +93,11 @@ function Spider (game) {
     item.subjectTo(new T.Vector3(0, -0.00009, 0));
     
     this.position = item.yaw.position;
+    this.rotation = item.yaw.rotation;
     
     game.scene.add(body);
     game.addItem(item);
 }
-
-Spider.prototype.turn = function (delta) {
-    this.item.yaw.rotation.y += delta;
-};
 
 Spider.prototype.move = function (x, y, z) {
     var T = this.game.THREE;
