@@ -33,6 +33,20 @@ function Spider (game) {
     head.position.set(0, 8, 7.5);
     body.add(head);
     
+    var eyes = [0,1].map(function () {
+        var eye = new T.Mesh(
+            new T.CubeGeometry(1, 1, 1),
+            new T.MeshLambertMaterial({
+                color: 0xffffff,
+                ambient: 0xffffff
+            })
+        );
+        body.add(eye);
+        return eye;
+    });
+    eyes[0].position.set(1.5, 9, 10);
+    eyes[1].position.set(-1.5, 9, 10);
+    
     var legs = [];
     for (var side = 0; side <= 1; side++) {
         for (var i = 0; i < 4; i++) {
