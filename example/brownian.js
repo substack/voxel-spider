@@ -24,4 +24,14 @@ setInterval(function () {
     spider.position.y += 1;
 }, 250);
 
+setTimeout(function f () {
+    spider.move(0, 0, 0.1);
+    setTimeout(f, 2000 * Math.random());
+}, 2000 * Math.random());
+
+setTimeout(function f () {
+    spider.turn(Math.PI * (Math.random() - 0.5));
+    setTimeout(f, 2000 * Math.random());
+}, 2000 * Math.random());
+
 window.spider = spider;
