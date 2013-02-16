@@ -4,6 +4,8 @@ blocky spider creatures for your [voxel.js](http://voxeljs.com) game
 
 # example
 
+[view the swarm demo](http://substack.net/projects/voxel-spider/)
+
 ``` js
 var createGame = require('voxel-engine');
 var voxel = require('voxel');
