@@ -1,6 +1,6 @@
 {
     "name": "voxel-spider",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "blocky spider creatures for your voxel.js game",
     "main": "index.js",
     "dependencies": {
