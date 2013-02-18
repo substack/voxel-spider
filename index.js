@@ -1,14 +1,17 @@
 var texture = require('voxel-texture');
 var physical = require('voxel-physical');
+var voxelCreature = require('voxel-creature');
 
 module.exports = function (game) {
+    var createCreature = voxelCreature(game);
+    
     return function () {
-        return new Spider(game);
+        var spider = createSpider(game);
+        return createCreature(spider);
     };
 };
 
-function Spider (game) {
-    this.game = game;
+function createSpider (game) {
     var T = game.THREE;
     
     var body = new T.Object3D;
@@ -86,23 +89,7 @@ function Spider (game) {
             leg.state = !leg.state;
             leg.position.y = leg.state + 3;
         });
-    }, 100);
+    }, 250);
     
-    var dims = new T.Vector3(10, 10, 10);
-    var item = this.item = game.makePhysical(body, dims);
-    item.subjectTo(new T.Vector3(0, -0.00009, 0));
-    
-    this.position = item.yaw.position;
-    this.rotation = item.yaw.rotation;
-    
-    game.scene.add(body);
-    game.addItem(item);
+    return body;
 }
-
-Spider.prototype.move = function (x, y, z) {
-    var T = this.game.THREE;
-    if (typeof x === 'object') { y = x.y; z = x.z; x = x.x }
-    this.item.velocity.x += x;
-    this.item.velocity.y += y;
-    this.item.velocity.z += z;
-};

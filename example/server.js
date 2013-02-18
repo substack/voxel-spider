@@ -14,4 +14,4 @@ var server = http.createServer(function (req, res) {
     }
     else staticDir(req, res);
 });
-server.listen(8085);
+server.listen(8086);
