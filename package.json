@@ -5,7 +5,8 @@
     "main": "index.js",
     "dependencies": {
         "voxel-texture": "~0.3.1",
-        "voxel-physical": "~0.0.2"
+        "voxel-physical": "~0.0.2",
+        "voxel-creature": "~0.1.0"
     },
     "devDependencies": {
         "voxel-player": "~0.0.0",

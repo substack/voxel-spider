@@ -22,9 +22,14 @@ spider.position.y = 200;
 
 spider.on('block', function () { spider.jump() });
 spider.notice(substack, { radius: 500 });
+
 spider.on('notice', function (player) {
     spider.lookAt(player);
     spider.move(0, 0, 0.5);
+});
+
+spider.on('collide', function (player) {
+    console.log('COLLISION');
 });
 
 setInterval(function () {
