@@ -1,8 +1,9 @@
 var createGame = require('voxel-engine');
 var voxel = require('voxel');
+var texturePath = require('painterly-textures')(__dirname)
 var game = createGame({
     generate: voxel.generator['Valley'],
-    texturePath: '/textures/'
+    texturePath: texturePath
 });
 game.appendTo('#container');
 
